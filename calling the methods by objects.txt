@@ -1,0 +1,39 @@
+namespace Day_3
+{
+					
+public class Student
+{
+	public int StudentRollno;
+	public string StudentName;
+	
+	public void GetStudentData()
+	{
+	    Console.WriteLine("please enter id");
+		StudentRollno=Convert.ToInt32(Console.ReadLine());
+		
+		Console.WriteLine("please enter name");
+		StudentName=Console.ReadLine();
+	}
+	public void GetStudentDetails()
+	{
+	   Console.WriteLine("Student details are: ");
+		Console.WriteLine("Student id :" + StudentRollno);
+		Console.WriteLine("Student name : " +  StudentName );
+	}
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+	{
+	    Student stu=new Student();
+		
+		stu.GetStudentData();
+		stu.GetStudentDetails();
+		
+		Console.ReadLine();
+	
+	
+	}
+}
+}

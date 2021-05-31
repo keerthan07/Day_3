@@ -1,0 +1,43 @@
+using System;
+
+namespace Day_3
+{
+					
+public class Student
+{
+	public int StudentRollno;
+	public string StudentName;
+	
+	public Student(Student stu)
+	{
+	    StudentRollno=stu.StudentRollno;
+		StudentName=stu.StudentName;
+	}
+	public Student(int StudentRollno, string StudentName )
+	{
+	    this.StudentRollno=StudentRollno;
+		this.StudentName=StudentName;
+	}
+	public void GetStudentDetails()
+	{
+	   Console.WriteLine("Student details are: ");
+		Console.WriteLine("Student id :" + StudentRollno);
+		Console.WriteLine("Student name : " +  StudentName );
+	}
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+	{
+	    Student stu1=new Student(101,"keerthan");
+		Student stu2=new Student(stu1);
+		
+		stu2.GetStudentDetails();
+		
+		Console.ReadLine();
+	
+	
+	}
+}
+}
